@@ -2,7 +2,13 @@
 
 Hecho por **Mr Dave**.
 
-![Semáforo](stl/vista.png)
+<img src="fotos/semaforo-impreso.jpg" alt="Semáforo impreso funcionando" width="420">
+
+*El semáforo impreso, en verde (libre).*
+
+Vista del modelo 3D:
+
+![Modelo 3D](stl/vista.png)
 
 Convierte una LilyGo T-Display-S3 en un semáforo que muestra el estado de Claude Code. La pantalla dibuja tres luces (rojo, amarillo, verde) y cambia según las líneas que recibe por USB-serie.
 
