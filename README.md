@@ -2,6 +2,8 @@
 
 Hecho por **Mr Dave**.
 
+![Semáforo](stl/vista.png)
+
 Convierte una LilyGo T-Display-S3 en un semáforo que muestra el estado de Claude Code. La pantalla dibuja tres luces (rojo, amarillo, verde) y cambia según las líneas que recibe por USB-serie.
 
 ## Estados
@@ -22,6 +24,25 @@ Convierte una LilyGo T-Display-S3 en un semáforo que muestra el estado de Claud
 | `MODE V` | Carcasa con ventana rectangular (luces + texto del estado) |
 
 Velocidad serie: 115200.
+
+## Piezas para imprimir (`stl/`)
+La placa queda encerrada; solo se ve la pantalla, que dibuja las tres luces detrás de tres ventanas con visera.
+
+| Archivo | Cómo imprimir |
+|---|---|
+| `semaforo_cuerpo_luces.stl` | Tal cual: cara trasera abierta sobre la cama, viseras hacia arriba. Sin soportes. Usar `MODE L`. |
+| `semaforo_cuerpo_ventana.stl` | Alternativa con ventana rectangular (luces + texto del estado). Usar `MODE V`. |
+| `semaforo_tapa.stl` | Plana, topes hacia arriba. Entra a presión. |
+| `semaforo_poste_base.stl` | Base sobre la cama. Sin soportes. |
+
+PLA o PETG, capa 0.16–0.2 mm, 3 perímetros, 15 % de relleno. Imprime **un** cuerpo (luces o ventana), la tapa y el poste.
+
+### Montaje
+1. Pasa el cable USB-C por la ranura trasera del poste y la base (el enchufe queda dentro del poste, arriba).
+2. Conecta el enchufe a la placa y mete la placa con la pantalla hacia el frente y el USB abajo.
+3. Encaja el poste en el hueco inferior del cuerpo y cierra con la tapa.
+4. El agujerito lateral derecho da acceso al botón con un clip.
+5. Si las luces no quedan centradas en las ventanas, usa `CAL <px>`; si salen al revés, `ROT`.
 
 ## Compilar y cargar
 Requiere [PlatformIO](https://platformio.org/).
